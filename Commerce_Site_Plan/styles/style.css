@@ -3,11 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto Flex", sans-serif;
+    font-family:  "Montserrat", sans-serif;
 }
 
 :root {
-    --secondary-font: "Alatsi", sans-serif;
+   --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
     --primary-color: #3D5A80;
     --secondary-color: #404141;
     --accent-color-1: #75bff1;
@@ -16,26 +17,29 @@
 }
 
 /* HEADER */
-h1 {
-    font-family: var(--secondary-font);
-    font-size: 2rem;
-}
+
+
 
 
 
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    
     padding: 1rem 2rem;
     background-color: var(--accent-color-2);
     color: white;
     position: relative;
+    
+    
+     
 }
 
 .img {
     display: flex;
     align-items: center;
+    gap: 7rem;
 }
 
 .img img {
@@ -44,6 +48,13 @@ header {
 }
 
 /* NAVBAR */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 .nav-list {
     display: flex;
     list-style: none;
@@ -63,20 +74,24 @@ header {
     color: var(--accent-color-1);
 }
 
+
 /* MENÚ RESPONSIVO */
 .abrir-menu, .cerrar-menu {
+    
     display: none;
     background: none;
     border: none;
     font-size: 2rem;
     color: white;
     cursor: pointer;
+    
 }
 .nav {
     display: flex;
     gap: 1rem;
     background-color: var(--secondary-color);
     padding: 1%;
+    
      
     
 }
@@ -97,16 +112,17 @@ header {
         height: 0;
         background-color: var(--secondary-color);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-        transition: height 0.3s ease-in-out;
+        overflow: hidden; /* Evita que se vea una parte del menú */
+        transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        padding: 0; /* Evita que tenga espacio cuando está cerrado */
     }
 
     .nav.visible {
-        height: 50vh; /* Ocupa solo el 50% de la pantalla */
-      
+        height: 30vh; /* Se despliega al 50% de la pantalla */
+        padding: 1rem 0; /* Se añade espacio cuando está abierto */
     }
 
     .nav-list {
@@ -114,5 +130,6 @@ header {
         gap: 1rem;
     }
 }
+
 
 
