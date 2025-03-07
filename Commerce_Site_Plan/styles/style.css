@@ -32,6 +32,10 @@ header {
     
      
 }
+h2{
+   font-size: 1.2rem;
+   
+}
 
 h3 {
     font-size: 1.5rem;
@@ -209,6 +213,14 @@ section {
 }
 h3{
     margin-left: 6%;
+}
+
+h1{
+    font-size: 1.3rem;
+   
+    font-family: var(--primary-font)
+    
+    
 }
 
 }
