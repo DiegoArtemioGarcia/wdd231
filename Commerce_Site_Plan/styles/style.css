@@ -188,6 +188,9 @@ section {
         flex-direction: column;
         gap: 1rem;
     }
+    .FlexContainer {
+        width: 90%;
+    }
     .div1 {
     display: row;
     width: 100%;
@@ -203,6 +206,9 @@ section {
     margin: 1px;
     background-color: lightblue;
     
+}
+h3{
+    margin-left: 6%;
 }
 
 }
