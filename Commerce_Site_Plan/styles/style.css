@@ -32,6 +32,13 @@ header {
     
      
 }
+.home {
+   
+    font-size: small;
+    display: flex;
+    justify-content: center;
+}
+
 h2{
    font-size: 1.2rem;
    
@@ -39,12 +46,14 @@ h2{
 
 h3 {
     font-size: 1.5rem;
-    margin-left: 15%;
-    margin-bottom: 1%;
-    margin-top: 1%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--secondary-color);
+    color:var(--accent-color-2)
+
     
+}
+p{
+    font-size: medium;
+    color: var(--accent-color-2);
 }
 
 .img {
@@ -137,7 +146,7 @@ section {
     height: auto;
     overflow: auto;
     flex-direction: row;
-    margin-top: 1%;
+    margin-top: .1%;
 }
 
  .div1 {
@@ -179,7 +188,7 @@ section {
         align-items: center;
         justify-content: center;
         overflow: hidden; /* Evita que se vea una parte del menú */
-        transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        transition: height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Efecto de despliegue */
         padding: 0; /* Evita que tenga espacio cuando está cerrado */
     }
 
@@ -221,6 +230,11 @@ h1{
     font-family: var(--primary-font)
     
     
+}
+
+.home {
+    
+    justify-content: left;
 }
 
 }
