@@ -33,6 +33,16 @@ header {
      
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-left: 15%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--secondary-color);
+    
+}
+
 .img {
     display: flex;
     align-items: center;
@@ -92,7 +102,59 @@ nav {
      
     
 }
+section {
+     width: 70%;
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: rem;
+    background-color: var(--accent-color-1);
+    color: white;
+}
 
+/* CourseWork  */
+    .FlexContainer {
+        width: 70%;
+        max-width: 800px;/* Limita el ancho del contenedor */
+    text-align: center;
+    background-color: var(--accent-color-1);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: #f1eff4;
+    height: auto;
+    overflow: auto;
+    flex-direction: row;
+    margin-top: 1%;
+}
+
+ .div1 {
+    padding: 2%;
+    border-radius: 10px;
+    display: row;
+    width: 65%;
+    height: 250px;
+    margin: 1px;
+    background-color: lightblue;
+    
+}
+ .div2 {
+    padding: 2%;
+    border-radius: 10px;
+    display: row;
+    width: 32%;
+    height: 250px;
+    margin: 1px;
+    background-color: lightblue;
+}
 
 /* MENU DESPLEGABLE DESDE ARRIBA */
 /* MENÚ RESPONSIVO DESDE ARRIBA - SOLO 50% DE LA PANTALLA */
@@ -126,6 +188,23 @@ nav {
         flex-direction: column;
         gap: 1rem;
     }
+    .div1 {
+    display: row;
+    width: 100%;
+    height: 250px;
+    margin: 1px;
+    background-color: lightblue;
+}
+
+     .div2 {
+    display: row;
+    width: 100%;
+    height: 250px;
+    margin: 1px;
+    background-color: lightblue;
+    
+}
+
 }
 
 
