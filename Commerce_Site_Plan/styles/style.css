@@ -8,12 +8,13 @@
 
 :root {
    --primary-font: "Roboto", sans-serif;
-    --secondary-font: "Roboto", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
     --primary-color: #3D5A80;
     --secondary-color: #404141;
     --accent-color-1: #75bff1;
     --accent-color-2: #1c1c1c;
     --text-color: #030303;
+    --accent-color-3: #EE6C4D;
 }
 
 /* HEADER */
@@ -103,6 +104,7 @@ nav {
 }
 
 
+
 /* MENÚ RESPONSIVO */
 .abrir-menu, .cerrar-menu {
     
@@ -124,58 +126,217 @@ nav {
     
 }
 section {
-     width: 70%;
+     width: 100%;
     max-width: 800px;
     text-align: center;
     font-size: 1.2rem;
-    margin: 2rem auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: rem;
-    background-color: var(--accent-color-1);
-    color: white;
+    
+    
+   
+}
+
+
+/* contenedor cursos */
+.tituloh1 {
+    font-weight: 100; /* Peso de la fuente */
+    font-family: var(--primary-font); /* Usa la fuente primaria definida previamente */
+    text-align: center; /* Alinea el texto al centro */
+    font-size: large; /* Tamaño de fuente grande */
+}
+
+.FlexContainerCourse {
+    width: 70%; /* Ancho del contenedor al 70% */
+    max-width: 800px; /* Máximo de 800px de ancho */
+    text-align: center; /* Centra el texto */
+    font-size: 1rem; /* Tamaño de fuente 1.2rem */
+    margin: 2rem auto; /* Margen superior e inferior de 2rem y centrado horizontalmente */
+    gap: 2rem; /* Espaciado entre los elementos */
+    display: flex; /* Utiliza Flexbox */
+    margin: 0 auto; /* Centrado horizontal */
+    flex-wrap: nowrap; /* No permite que los elementos se ajusten */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    align-content: flex-start; /* Alinea el contenido al inicio verticalmente */
+    background-color: white; /* Color de fondo blanco */
+    height: auto; /* Alto automático */
+    overflow: auto; /* Permite el desbordamiento */
+    flex-direction: row; /* Los elementos se alinean en fila */
+    text-align: center; /* Centra el texto */
+    font-size: small; /* Tamaño de fuente pequeño */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.FlexContainerCourse div {
+    
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    width: 100px; /* Ancho fijo de 100px */
+    height: 0 auto; /* Alto automático */
+    margin: 10px; /* Espaciado alrededor de los elementos */
+    background-color: rgb(239, 244, 245); /* Color de fondo */
+    font-size: small; /* Tamaño de fuente pequeño */
+    display: flex; /* Utiliza Flexbox */
+    padding: 1%; /* Espaciado interno */
+    border-radius: 7px; /* Bordes redondeados */
+}
+
+.parent {
+    width: 100%; /* Ancho del contenedor al 100% */
+    max-width: 800px; /* Máximo de 800px de ancho */
+    text-align: center; /* Centra el texto */
+    font-size: 1.2rem; /* Tamaño de fuente 1.2rem */
+    margin: auto; /* Centrado horizontal */
+    padding: 10px; /* Espaciado interno */
+    background-color: #f1f0f5; /* Color de fondo */
+    display: grid; /* Utiliza el modelo de diseño Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-rows: repeat(2, auto); /* 2 filas con alto automático */
+    gap: 10px; /* Espaciado uniforme entre las celdas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-content: center; /* Centra los elementos verticalmente */
+}
+
+.parent  {
+    background-color: rgb(111, 196, 224); /* Color de fondo */
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: small; /* Tamaño de fuente pequeño */
+    
 }
 
 /* CourseWork  */
-    .FlexContainer {
-        width: 70%;
-        max-width: 800px;/* Limita el ancho del contenedor */
-    text-align: center;
-    background-color: var(--accent-color-1);
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    background-color: #fefefe;
-    height: auto;
-    overflow: auto;
-    flex-direction: row;
-    margin-top: .1%;
+.FlexContainer {
+    width: 80%; /* Ancho del contenedor al 80% */
+    max-width: 800px; /* Máximo de 800px de ancho */
+    text-align: center; /* Centra el texto */
+    background-color: var(--accent-color-1); /* Color de fondo usando la variable */
+    color: white; /* Color del texto blanco */
+    display: flex; /* Utiliza Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    justify-content: flex-start; /* Alinea los elementos al inicio horizontalmente */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    align-content: flex-start; /* Alinea el contenido al inicio verticalmente */
+    background-color: #fefefe; /* Color de fondo */
+    height: auto; /* Alto automático */
+    overflow: auto; /* Permite el desbordamiento */
+    flex-direction: row; /* Los elementos se alinean en fila */
+    margin-top: .1%; /* Margen superior pequeño */
 }
 
- .div1 {
-    padding: 2%;
-    border-radius: 10px;
-    display: row;
-    width: 65%;
-    height: 250px;
-    margin: 1px;
-    background-color: lightblue;
-    
+.div1 {
+    padding: 2%; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    display: row; /* Establece la dirección como fila */
+    width: 65%; /* Ancho al 65% */
+    height: 250px; /* Alto fijo de 250px */
+    margin: 1px; /* Espaciado alrededor */
+    background-color: lightblue; /* Color de fondo */
 }
- .div2 {
-    padding: 2%;
-    border-radius: 10px;
-    display: row;
-    width: 32%;
-    height: 250px;
-    margin: 1px;
-    background-color: lightblue;
+
+.div2 {
+    padding: 2%; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    display: row; /* Establece la dirección como fila */
+    width: 32%; /* Ancho al 32% */
+    height: 250px; /* Alto fijo de 250px */
+    margin: 1px; /* Espaciado alrededor */
+    background-color: lightblue; /* Color de fondo */
 }
+
+/* Título */
+.tituloh1 {
+    font-weight: 600; /* Peso de la fuente */
+    font-size: 1.8rem; /* Tamaño de fuente 1.8rem */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 1rem; /* Margen inferior de 1rem */
+    color: var(--primary-color); /* Color del texto usando la variable */
+}
+
+/* Contenedor de los filtros */
+.FlexContainerCourse {
+    width: 100%; /* Ancho al 100% */
+    max-width: 600px; /* Máximo de 600px de ancho */
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+    background-color: var(--secondary-color); /* Color de fondo usando la variable */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.FlexContainerCourse div {
+    background-color: var(--accent-color-1); /* Color de fondo usando la variable */
+    padding: 8px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9rem; /* Tamaño de fuente 0.9rem */
+    font-weight: 600; /* Peso de la fuente */
+    color: white; /* Color del texto blanco */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transition: all 0.3s ease-in-out; /* Transición suave en los cambios */
+    text-align: center; /* Centra el texto */
+}
+
+.FlexContainerCourse div:hover {
+    background-color: var(--accent-color-3); /* Cambia el color de fondo al hacer hover */
+}
+
+/* Contenedor de los cursos */
+.parent {
+    width: 100%; /* Ancho al 100% */
+    max-width: 600px; /* Máximo de 600px de ancho */
+    display: grid; /* Utiliza el modelo de diseño Grid */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* 3 columnas adaptables */
+    gap: 10px; /* Espaciado uniforme entre los elementos */
+    background-color: var(--secondary-color); /* Color de fondo usando la variable */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 5px; /* Margen superior */
+}
+
+/* Estilos de las tarjetas de los cursos */
+.materias {
+    background-color: var(--primary-color); /* Color de fondo usando la variable */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9rem; /* Tamaño de fuente 0.9rem */
+    text-align: center; /* Centra el texto */
+    font-weight: lighter; /* Peso de la fuente en negrita */
+     /* Color del texto blanco */
+    transition: transform 0.2s ease-in-out; /* Transición en el escalado */
+}
+
+.materias:hover {
+    transform: scale(1.05); /* Escala al 105% al pasar el mouse */
+    background-color: var(--accent-color-2); /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilo especial para cursos completados */
+.materias.completed {
+    background-color: var(--accent-color-3); /* Color de fondo */
+    color: white; /* Color de texto blanco */
+}
+
+/* Créditos totales */
+.credit-total {
+    text-align: center; /* Centra el texto */
+    font-size: 1.5rem; /* Tamaño de fuente 1.2rem */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    margin-top: 15px; /* Margen superior */
+    color: var(--primary-color); /* Color del texto usando la variable */
+    font-family: var(--primary-font);
+}
+
+
+
+
 
 /* MENU DESPLEGABLE DESDE ARRIBA */
 /* MENÚ RESPONSIVO DESDE ARRIBA - SOLO 50% DE LA PANTALLA */
@@ -212,6 +373,9 @@ section {
     .FlexContainer {
         width: 90%;
     }
+    
+
+    
     .div1 {
     display: row;
     width: 100%;
@@ -248,8 +412,36 @@ h1{
     
     justify-content: left;
 }
+.parent {
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: auto;   /* Filas automáticas */
+    }
 
+  .FlexContainerCourse {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 90%;
+    }
+
+    .FlexContainerCourse div {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .materias {
+        width: 100%;
+        padding: 15px;
+    }  
 }
+
 
 
 
