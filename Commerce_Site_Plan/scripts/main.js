@@ -1,4 +1,4 @@
-// Seleccionamos los elementos
+<!-- Seleccionamos los elementos -->
 const nav = document.querySelector('#nav');
 const abrir = document.querySelector('#abrir');
 const cerrar = document.querySelector('#cerrar');
@@ -102,8 +102,8 @@ function renderCourses(filter = "All") {
 
         // Cambiar estilo si está completado
         if (course.completed) {
-            courseDiv.style.backgroundColor = "#5cb85c"; // Verde para cursos completados
-            courseDiv.style.color = "white";
+            courseDiv.style.backgroundColor = "var(--accent-color-3)"; // Usar el color de accent-color-3
+            courseDiv.style.color = "white"; // Asegurar que el texto sea blanco
         } else {
             courseDiv.style.backgroundColor = "lightblue";
         }
@@ -125,3 +125,9 @@ filterButtons.forEach(button => {
 
 // Renderizar inicialmente todos los cursos
 renderCourses();
+
+// Actualizar el año de copyright en el footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Mostrar la última fecha de modificación del documento
+document.getElementById("lastModified").textContent = document.lastModified;
