@@ -39,9 +39,9 @@ h1 {
   font-weight: 100;
   font-family: var(--primary-font);
 }
-span {
+header {
   font-size: 2rem;
-  font-family: var(--primary-font);
+  font-family: var(--primary-color);
 }
 
 
@@ -338,7 +338,7 @@ footer {
   background: var(--secondary-color);
   color: white;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -460,10 +460,11 @@ footer {
   background: var(--secondary-color);
   color: white;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   position: relative;
-  bottom: 0;
+  bottom: 1;
   width: 100%;
+ 
   
 }
 .responsive-img {
