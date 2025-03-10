@@ -66,11 +66,13 @@ p {
   display: flex;
   align-items: center;
   gap: 7rem;
+  
 }
 
 .img img {
   width: 80px;
   margin-right: 20px;
+  
 }
 
 /* NAVBAR */
@@ -237,6 +239,10 @@ section {
   height: 250px; /* Alto fijo de 250px */
   margin: 1px; /* Espaciado alrededor */
   background-color: lightblue; /* Color de fondo */
+}
+.responsive-img {
+  
+    border-radius: 10px;
 }
 
 /* Título */
@@ -406,6 +412,7 @@ footer {
     height: auto;
     display: block;
     object-fit: cover;/* Para que la imagen se ajuste al contenedor */
+    border-radius: 10px;
 }
 
   
