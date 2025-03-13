@@ -60,6 +60,7 @@ h3 {
 p {
   font-size: medium;
   
+  
 }
 
 .img {
@@ -231,6 +232,7 @@ section {
   height: 250px; /* Alto fijo de 250px */
   margin: 1px; /* Espaciado alrededor */
   background-color: lightblue; /* Color de fondo */
+  color: var(--accent-color-2);
 }
 
 
@@ -243,6 +245,7 @@ section {
   height: 250px; /* Alto fijo de 250px */
   margin: 1px; /* Espaciado alrededor */
   background-color: lightblue; /* Color de fondo */
+  color: var(--accent-color-2);
 }
 .responsive-img {
   
