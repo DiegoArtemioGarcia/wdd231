@@ -9,7 +9,7 @@
 
 :root {
   --primary-font: "Roboto", sans-serif;
-  --secondary-font: "Montserrat", sans-serif;
+  
   --primary-color: #3d5a80;
   --secondary-color: #404141;
   --accent-color-1: #75bff1;
@@ -29,6 +29,267 @@ header {
   background-color: var(--accent-color-2);
   color: white;
   position: relative;
+  /* Reset y Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--secondary-font);
+}
+
+:root {
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+  --primary-color: #3d5a80;
+  --secondary-color: #404141;
+  --accent-color-1: #75bff1;
+  --accent-color-2: #1c1c1c;
+  --text-color: #030303;
+  --accent-color-3: #ee6c4d;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--accent-color-2);
+  color: white;
+  position: relative;
+  font-size: 2rem;
+  font-family: var(--primary-font);
+}
+
+.home {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: 100;
+  font-family: var(--primary-font);
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--primary-font);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--accent-color-2);
+}
+
+p {
+  font-size: medium;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+}
+
+.img img {
+  width: 80px;
+  margin-right: 20px;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: var(--accent-color-1);
+}
+
+/* MENÚ RESPONSIVO */
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--secondary-color);
+  padding: 1%;
+}
+
+section {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Contenedor cursos */
+.FlexContainerCourse {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.FlexContainerCourse div {
+  background-color: var(--accent-color-1);
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.FlexContainerCourse div:hover {
+  background-color: var(--accent-color-3);
+}
+
+/* Contenedor de los cursos */
+.parent {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+/* Estilos de las tarjetas de los cursos */
+.materias {
+  background-color: var(--primary-color);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: lighter;
+  color: var(--accent-color-2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.materias:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-color-2);
+}
+
+.materias.completed {
+  background-color: var(--accent-color-3);
+  color: white;
+}
+
+/* Créditos totales */
+.credit-total {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  background: var(--secondary-color);
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* MENÚ RESPONSIVO */
+@media screen and (max-width: 980px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0;
+  }
+
+  .nav.visible {
+    height: 30vh;
+    padding: 1rem 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .FlexContainer {
+    width: 90%;
+  }
+
+  .div1,
+  .div2 {
+    width: 100%;
+    height: auto;
+    margin: 1px;
+    background-color: lightblue;
+  }
+
+  .parent {
+    grid-template-columns: 1fr;
+  }
+  
+  footer {
+    position: relative;
+  }
+}
+
 }
 .home {
   font-size: small;
@@ -39,10 +300,7 @@ h1 {
   font-weight: 100;
   font-family: var(--primary-font);
 }
-header {
-  font-size: 2rem;
-  font-family: var(--primary-font);
-}
+
 
 
 h2 {
@@ -55,7 +313,7 @@ h3 {
   font-size: 1.5rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: var(--accent-color-2)
+  color: var(--accent-color-2);
 }
 p {
   font-size: medium;
@@ -129,16 +387,11 @@ section {
 }
 
 /* contenedor cursos */
-.tituloh1 {
-  font-weight: 100; /* Peso de la fuente */
-  font-family: var( --primary-font); /* Usa la fuente primaria definida previamente */
-  text-align: center; /* Alinea el texto al centro */
-  font-size: large; /* Tamaño de fuente grande */
-}
+
 
 .FlexContainerCourse {
-  width: 70%; /* Ancho del contenedor al 70% */
-  max-width: 800px; /* Máximo de 800px de ancho */
+  width: 100%; /* Ancho al 100% */
+  max-width: 600px; /* Máximo de 600px de ancho */
   text-align: center; /* Centra el texto */
   font-size: 1rem; /* Tamaño de fuente 1.2rem */
   margin: 2rem auto; /* Margen superior e inferior de 2rem y centrado horizontalmente */
@@ -149,15 +402,18 @@ section {
   justify-content: flex-start; /* Alinea los elementos al inicio */
   align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
   align-content: flex-start; /* Alinea el contenido al inicio verticalmente */
-  background-color: white; /* Color de fondo blanco */
+  gap: 20px; /* Espacio entre los elementos */
   height: auto; /* Alto automático */
   overflow: auto; /* Permite el desbordamiento */
   flex-direction: row; /* Los elementos se alinean en fila */
   text-align: center; /* Centra el texto */
   font-size: small; /* Tamaño de fuente pequeño */
   justify-content: center; /* Centra los elementos horizontalmente */
-  
+  background-color: var(--secondary-color); /* Color de fondo usando la variable */
+    padding: 10px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
 }
+
 
 .FlexContainerCourse div {
   align-items: center; /* Alinea los elementos en el centro verticalmente */
@@ -165,7 +421,7 @@ section {
   width: 100px; /* Ancho fijo de 100px */
   height: auto; /* Alto automático */
   margin: 10px; /* Espaciado alrededor de los elementos */
-  background-color: rgb(239, 244, 245); /* Color de fondo */
+  
   font-size: small; /* Tamaño de fuente pequeño */
   display: flex; /* Utiliza Flexbox */
   padding: 1%; /* Espaciado interno */
@@ -175,31 +431,27 @@ section {
 
 .parent {
   width: 100%; /* Ancho del contenedor al 100% */
-  max-width: 800px; /* Máximo de 800px de ancho */
+  max-width: 600px; /* Máximo de 800px de ancho */
   text-align: center; /* Centra el texto */
   font-size: 1.2rem; /* Tamaño de fuente 1.2rem */
   margin: auto; /* Centrado horizontal */
   padding: 10px; /* Espaciado interno */
-  background-color: #f1f0f5; /* Color de fondo */
+  gap: 10px; /* Espaciado uniforme entre los elementos */
   display: grid; /* Utiliza el modelo de diseño Grid */
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  grid-template-columns: repeat(auto-fill,minmax(140px, 1fr)); /* 3 columnas adaptables */
   grid-template-rows: repeat(2, auto); /* 2 filas con alto automático */
   gap: 10px; /* Espaciado uniforme entre las celdas */
   justify-content: center; /* Centra los elementos horizontalmente */
   align-content: center; /* Centra los elementos verticalmente */
+  background-color: var(--secondary-color); /* Color de fondo usando la variable */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-top: 5px; /* Margen superior */
   
 }
 
-.parent {
-  background-color: rgb(111, 196, 224); /* Color de fondo */
-  display: flex; /* Utiliza Flexbox */
-  align-items: center; /* Alinea los elementos al centro verticalmente */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  padding: 5px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: small; /* Tamaño de fuente pequeño */
-  
-}
+
+
 
 /* CourseWork  */
 .FlexContainer {
@@ -255,25 +507,15 @@ section {
 /* Título */
 .tituloh1 {
   font-weight: 600; /* Peso de la fuente */
-  font-size: 1.8rem; /* Tamaño de fuente 1.8rem */
+  font-size: 1.2rem; /* Tamaño de fuente 1.8rem */
   text-align: center; /* Centra el texto */
   margin-bottom: 1rem; /* Margen inferior de 1rem */
+  margin-top: 1rem; /* Margen superior de 1rem */
   color: var(--primary-color); /* Color del texto usando la variable */
+  font-family: var( --primary-font); /* Usa la fuente primaria definida previamente */
 }
 
-/* Contenedor de los filtros */
-.FlexContainerCourse {
-  width: 100%; /* Ancho al 100% */
-  max-width: 600px; /* Máximo de 600px de ancho */
-  display: flex; /* Utiliza Flexbox */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 20px; /* Espacio entre los elementos */
-  background-color: var(
-    --secondary-color
-  ); /* Color de fondo usando la variable */
-  padding: 10px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
-}
+
 
 .FlexContainerCourse div {
   background-color: var(
@@ -296,22 +538,7 @@ section {
 }
 
 /* Contenedor de los cursos */
-.parent {
-  width: 100%; /* Ancho al 100% */
-  max-width: 600px; /* Máximo de 600px de ancho */
-  display: grid; /* Utiliza el modelo de diseño Grid */
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(140px, 1fr)
-  ); /* 3 columnas adaptables */
-  gap: 10px; /* Espaciado uniforme entre los elementos */
-  background-color: var(
-    --secondary-color
-  ); /* Color de fondo usando la variable */
-  padding: 10px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
-  margin-top: 5px; /* Margen superior */
-}
+
 
 /* Estilos de las tarjetas de los cursos */
 .materias {
