@@ -59,7 +59,7 @@ h3 {
 }
 p {
   font-size: medium;
-  color: var(--accent-color-2);
+  
 }
 
 .img {
@@ -155,6 +155,7 @@ section {
   text-align: center; /* Centra el texto */
   font-size: small; /* Tamaño de fuente pequeño */
   justify-content: center; /* Centra los elementos horizontalmente */
+  
 }
 
 .FlexContainerCourse div {
@@ -168,6 +169,7 @@ section {
   display: flex; /* Utiliza Flexbox */
   padding: 1%; /* Espaciado interno */
   border-radius: 7px; /* Bordes redondeados */
+  
 }
 
 .parent {
@@ -184,6 +186,7 @@ section {
   gap: 10px; /* Espaciado uniforme entre las celdas */
   justify-content: center; /* Centra los elementos horizontalmente */
   align-content: center; /* Centra los elementos verticalmente */
+  
 }
 
 .parent {
@@ -194,6 +197,7 @@ section {
   padding: 5px; /* Espaciado interno */
   border-radius: 5px; /* Bordes redondeados */
   font-size: small; /* Tamaño de fuente pequeño */
+  
 }
 
 /* CourseWork  */
@@ -314,7 +318,7 @@ section {
   font-size: 0.9rem; /* Tamaño de fuente 0.9rem */
   text-align: center; /* Centra el texto */
   font-weight: lighter; /* Peso de la fuente en negrita */
-  color: white; /* Color del texto blanco */
+  color: var(--accent-color-2);
   transition: transform 0.2s ease-in-out; /* Transición en el escalado */
 }
 
@@ -342,7 +346,7 @@ section {
 footer {
   text-align: center;
   background: var(--secondary-color);
-  color: white;
+  color: white !important;
   padding: 1rem;
   margin-top: 1rem;
   position: absolute;
