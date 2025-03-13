@@ -37,15 +37,12 @@ header {
   font-family: var(--secondary-font);
 }
 
-:root {
-  --primary-font: "Roboto", sans-serif;
-  --secondary-font: "Montserrat", sans-serif;
-  --primary-color: #3d5a80;
-  --secondary-color: #404141;
-  --accent-color-1: #75bff1;
-  --accent-color-2: #1c1c1c;
-  --text-color: #030303;
-  --accent-color-3: #ee6c4d;
+span{
+  font-size: 160%;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  
+  
 }
 
 /* HEADER */
