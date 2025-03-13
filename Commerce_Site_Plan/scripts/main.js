@@ -81,7 +81,9 @@ const courseContainer = document.querySelector(".parent");
 const filterButtons = document.querySelectorAll(".FlexContainerCourse div");
 const creditTotal = document.createElement("p"); // Para mostrar créditos
 creditTotal.classList.add("credit-total");
-document.body.appendChild(creditTotal);
+const footer = document.querySelector("footer");
+document.body.insertBefore(creditTotal, footer);
+
 
 // Función para renderizar los cursos
 function renderCourses(filter = "All") {
@@ -121,6 +123,8 @@ filterButtons.forEach(button => {
     button.addEventListener("click", () => {
         renderCourses(button.textContent.trim());
     });
+
+    
 });
 
 // Renderizar inicialmente todos los cursos
