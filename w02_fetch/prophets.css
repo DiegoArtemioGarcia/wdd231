@@ -1,0 +1,114 @@
+body {
+  font-size: 18px;
+  font-family: Roboto, Helvetica, sans-serif;
+  color: #fff;
+}
+
+/* Variables globales para colores consistentes en toda la aplicación */
+:root {
+  --primary-color: #053565; /* Azul oscuro para elementos principales */
+  --secondary-color: #272727; /* Gris oscuro para elementos secundarios */
+  --accent-color: #e4e2e1; /* Gris claro para acentos y fondos */
+  --text-color: #030303; /* Negro para texto principal */
+}
+/* Estilos del encabezado - Centrado y diseño visual */
+header {
+  text-align: center; /* Centra el contenido del header */
+  padding: 1rem; /* Espaciado interno uniforme */
+  background-color: var(--primary-color); /* Fondo azul oscuro */
+  color: white; /* Texto blanco para contraste */
+}
+/* Estilo del título principal */
+h1 {
+  font-size: 1.5rem; /* Tamaño de fuente base */
+  margin: 0; /* Elimina márgenes predeterminados */
+}
+/* Contenedor principal de tarjetas - Layout Grid responsivo */
+#cards {
+  display: grid; /* Usa CSS Grid para el layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Columnas adaptativas */
+  gap: 1rem; /* Espacio entre tarjetas */
+  padding: 1rem; /* Espaciado interno */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrado horizontal */
+}
+/* Estilos de las tarjetas individuales */
+section {
+  background-color: rgb(120, 204, 246); /* Fondo gris claro */
+  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 1rem; /* Espaciado interno */
+  text-align: center; /* Contenido centrado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Animación al hover */
+}
+/* Efecto hover en las tarjetas */
+section:hover {
+  transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+}
+/* Estilos del nombre del profeta */
+h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+img {
+  width: 100%; /* Ancho completo del contenedor */
+  max-width: 200px; /* Ancho máximo */
+  height: auto; /* Altura proporcional */
+  border-radius: 4px; /* Esquinas redondeadas */
+  margin: 0 auto; /* Centrado horizontal */
+  display: block; /* Elimina espacio inferior extra */
+}
+nav {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  width: 100%;
+
+  
+  
+}
+/* Estilos del pie de página */
+footer {
+  text-align: center; /* Texto centrado */
+  padding: 1rem; /* Espaciado interno */
+  background-color: var(--secondary-color); /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  margin-top: 2rem; /* Espacio superior */
+}
+/* Media queries para diseño responsivo */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Título más grande en pantallas medianas */
+  }
+  #cards {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Ajuste de columnas */
+  }
+}
+@media screen and (min-width: 1024px) {
+  #cards {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    ); /* Más columnas en pantallas grandes */
+  }
+}
+@media screen and (max-width: 480px) {
+  #cards {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    padding: 0.5rem; /* Menos padding */
+  }
+  section {
+    margin: 0.5rem; /* Menos margen entre tarjetas */
+  }
+}
