@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Tech Solutions",
+      "address": "123 Main St, New York, NY",
+      "phone": "(212) 555-1234",
+      "website": "https://www.techsolutions.com",
+      "image": "images/techsolutions.png",
+      "membership": 3,
+      "category": "Technology",
+      "description": "Software development and IT solutions company."
+    },
+    {
+      "name": "Green Energy Co.",
+      "address": "456 Greenway Blvd, Los Angeles, CA",
+      "phone": "(323) 555-5678",
+      "website": "https://www.greenenergy.com",
+      "image": "images/greenenergy.png",
+      "membership": 2,
+      "category": "Renewable Energy",
+      "description": "Providers of solar and wind energy solutions."
+    },
+    {
+      "name": "City Bistro",
+      "address": "789 Market St, Chicago, IL",
+      "phone": "(312) 555-9012",
+      "website": "https://www.citybistro.com",
+      "image": "images/citybistro.png",
+      "membership": 1,
+      "category": "Restaurant",
+      "description": "A cozy café serving the best local dishes."
+    },
+    {
+      "name": "AutoFix Garage",
+      "address": "321 Mechanic Ave, Houston, TX",
+      "phone": "(713) 555-3456",
+      "website": "https://www.autofix.com",
+      "image": "images/autofix.png",
+      "membership": 2,
+      "category": "Automotive",
+      "description": "Car repair and maintenance services."
+    },
+    {
+      "name": "Style Boutique",
+      "address": "654 Fashion St, Miami, FL",
+      "phone": "(305) 555-7890",
+      "website": "https://www.styleboutique.com",
+      "image": "images/styleboutique.png",
+      "membership": 3,
+      "category": "Fashion",
+      "description": "High-quality clothing and accessories store."
+    },
+    {
+      "name": "EduPro Academy",
+      "address": "987 Learning Ln, Seattle, WA",
+      "phone": "(206) 555-2345",
+      "website": "https://www.eduproacademy.com",
+      "image": "images/edupro.png",
+      "membership": 1,
+      "category": "Education",
+      "description": "Online courses and professional training."
+    },
+    {
+      "name": "Health First Clinic",
+      "address": "147 Wellness Rd, San Francisco, CA",
+      "phone": "(415) 555-6789",
+      "website": "https://www.healthfirst.com",
+      "image": "images/healthfirst.png",
+      "membership": 3,
+      "category": "Healthcare",
+      "description": "Medical clinic with specialized care services."
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+/* Estilos generales */
+* {
+  margin: 0; /* Elimina el margen por defecto de todos los elementos */
+  padding: 0; /* Elimina el padding por defecto de todos los elementos */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total */
+}
+html, body {
+  height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+/* Variables CSS */
+:root {
+  --primary-font: "Roboto", sans-serif; /* Fuente principal */
+  --secondary-font: "Roboto Slab", serif; /* Fuente secundaria */
+  --primary-color: #3d5a80; /* Color primario */
+  --secondary-color: #98c1d9; /* Color secundario */
+  --accent-color-1: #101111; /* Color de acento 1 */
+  --accent-color-2: #ee6c4d; /* Color de acento 2 */
+  --accent-color-3: #293241; /* Color de acento 3 */
+  --text-color: #030303; /* Color del texto */
+}
+/* Estilo para el contenedor principal */
+.container {
+  display: flex; /* Usa flexbox para organizar los elementos */
+  flex-direction: column; /* Organiza los elementos en columna */
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+}
+
+.imagenprincipal {
+    width: 100%; /* Asegura que el div ocupe el 100% del ancho del body */
+    overflow: hidden; /* Opcional: oculta el desbordamiento si es necesario */
+}
+.imagenprincipal img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del div */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio en la parte inferior de la imagen */
+}
+
+/* Estilo para el contenido principal */
+main {
+  flex: 1; /* Permite que el main ocupe el espacio disponible */
+}
+/* Estilo para el footer */
+footer {
+  margin-top: 10px; /* Espacio superior */
+  text-align: center; /* Centra el texto */
+  background: var(--secondary-color); /* Color de fondo del footer */
+  color: white; /* Color del texto en el footer */
+  padding: 1rem; /* Espaciado interno */
+}
+/* Estilo para el contenedor de las tarjetas */
+#cards {
+  width: 80%; /* Ocupa el 80% del ancho del body */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+/* Estilos para la vista de cuadrícula */
+.grid-view {
+  display: grid; /* Usa grid para organizar las tarjetas */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño de las columnas */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+/* Estilos para cada tarjeta */
+
+
+
+.card {
+  border: 1px solid #ddd; /* Borde de la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  transition: transform 0.2s; /* Transición suave al escalar */
+  background-color: white; /* Color de fondo por defecto */
+}
+.card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+}
+/* Estilos para los párrafos dentro de las tarjetas */
+.card p {
+  font-size: 0.7rem; /* Tamaño de fuente más pequeño */
+}
+/* Estilos para la vista de lista */
+.list-view {
+  display: block; /* Cambia a bloque para la vista de lista */
+}
+.list-view .card {
+  display: flex; /* Usa flexbox para alinear elementos */
+  
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+}
+.list-view .card img {
+  margin-right: 15px; /* Espacio a la derecha de la imagen */
+  width: 80px; /* Ajusta el tamaño de la imagen en la vista de lista */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+/* Estilos para el botón de cambio de vista */
+#toggleView {
+  display: block; /* Centra el botón */
+  margin: 5px auto; /* Agrega margen superior y lo centra */
+  padding: 10px 20px; /* Agrega espaciado interno */
+  background-color: #8cb5e1; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina el borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+#toggleView:hover {
+  background-color: #7bb7f7; /* Color más oscuro al pasar el mouse */
+}
+/* Estilos para botones en general */
+button {
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+/* Estilos para el modo oscuro */
+[data-theme="dark"] {
+  background-color: #121212; /* Color de fondo en modo oscuro */
+  color: #ffffff; /* Color del texto en modo oscuro */
+}
+[data-theme="dark"] .card {
+  background-color: #1c1c1c; /* Fondo de tarjeta en modo oscuro */
+  border: 1px solid #444; /* Borde de tarjeta en modo oscuro */
+}
+[data-theme="dark"] .card p {
+  color: #ffffff; /* Texto en blanco en modo oscuro */
+}
+/* Variables para el modo oscuro */
+[data-theme="dark"] {
+  --primary-color: #4b4c4d; /* Color primario en modo oscuro */
+  --secondary-color: #1c1c1c; /* Color secundario en modo oscuro */
+  --accent-color-1: #6a7079; /* Color de acento 1 en modo oscuro */
+  --accent-color-2: #f6f4f3; /* Color de acento 2 en modo oscuro */
+  --text-color: #ffffff; /* Color del texto en modo oscuro */
+  --bg-color: #121212; /* Color de fondo en modo oscuro */
+}
+/* Estilos para el botón de alternancia del modo oscuro */
+.switch {
+  position: relative; /* Posición relativa para el interruptor */
+  display: inline-block; /* Muestra en línea */
+  width: 42px; /* Ancho del interruptor */
+  height: 24px; /* Alto del interruptor */
+}
+.switch input {
+  opacity: 0; /* Oculta el input */
+  width: 0; /* Ancho 0 */
+  height: 0; /* Alto 0 */
+}
+.slider {
+  position: absolute; /* Posiciona el slider absolutamente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  top: 0; /* Alinea en la parte superior */
+  left: 0; /* Alinea a la izquierda */
+  right: 0; /* Alinea a la derecha */
+  bottom: 0; /* Alinea en la parte inferior */
+  background-color: #0e0e0e; /* Color de fondo del slider */
+  transition: 0.4s; /* Transición suave */
+}
+.slider:before {
+  position: absolute; /* Posiciona el pseudo-elemento absolutamente */
+  content: ""; /* Contenido vacío */
+  height: 18px; /* Alto del pseudo-elemento */
+  width: 18px; /* Ancho del pseudo-elemento */
+  left: 3px; /* Margen izquierdo */
+  bottom: 3px; /* Margen inferior */
+  background-color: rgb(154, 152, 152); /* Color de fondo del pseudo-elemento */
+  transition: 0.4s; /* Transición suave */
+}
+input:checked + .slider {
+  background-color: var(--accent-color-2); /* Cambia el color de fondo cuando está activado */
+}
+input:checked + .slider:before {
+  transform: translateX(18px); /* Desplaza el pseudo-elemento cuando está activado */
+}
+.slider.round {
+  border-radius: 24px; /* Bordes redondeados para el interruptor */
+}
+.slider.round:before {
+  border-radius: 50%; /* Bordes redondeados para el pseudo-elemento */
+}
+/* Estilos globales para listas y enlaces */
+li,
+a {
+  font-family: var(--primary-font); /* Fuente utilizada */
+  font-size: 16px; /* Tamaño de fuente */
+  color: var(--accent-color-1); /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+}
+/* Estilos para el encabezado */
+header {
+  height: 100%; /* Altura del encabezado */
+  display: flex; /* Usa flexbox para organizar elementos */
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  align-items: center; /* Centra verticalmente */
+  padding: 10px 1%; /* Espaciado interno */
+  background-color: var(--secondary-color); /* Color de fondo del encabezado */
+}
+/* Estilos para párrafos */
+p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fuente utilizada */
+  font-size: 1.3rem; /* Tamaño de fuente */
+  color: var(--accent-color-1); /* Color del texto */
+  margin-left: 10px; /* Margen izquierdo */
+}
+/* Estilos para la navegación */
+.nav_links {
+  
+  list-style: none; /* Elimina los puntos de la lista */
+}
+.nav_links li {
+  display: inline-block; /* Muestra los elementos en línea */
+  padding: 0px 20px; /* Espaciado horizontal */
+}
+.nav_links li a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fuente utilizada */
+  transition: all 0.3s ease 0s; /* Transición suave para enlaces */
+}
+.nav_links li a:hover {
+  color: var(--accent-color-2); /* Cambia el color al pasar el mouse */
+}
+/* Estilos para el logo */
+.logo1 {
+  display: grid; /* Usa grid para el logo */
+  margin-right: auto; /* Margen derecho automático para centrar */
+  background-color: var(--secondary-color); /* Color de fondo del logo */
+  display: flex; /* Usa flexbox para organizar elementos */
+  align-items: center; /* Centra verticalmente */
+  font-family: var(--primary-font); /* Fuente utilizada */
+  font-size: 1.5rem; /* Tamaño de fuente */
+  color: var(--accent-color-2); /* Color del texto */
+}
+/* Estilos para el menú hamburguesa */
+.hamburger {
+  display: none; /* Oculta el menú hamburguesa por defecto */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  padding: 0; /* Sin espaciado */
+  margin-left: auto; /* Margen izquierdo automático para centrar */
+}
+.bar {
+  display: block; /* Muestra las barras del menú */
+  width: 30px; /* Ancho de las barras */
+  height: 3px; /* Alto de las barras */
+  margin: 5px 10px; /* Margen alrededor de las barras */
+  background-color: var(--primary-color); /* Color de las barras */
+  transition: all 0.5s ease-in-out; /* Transición suave */
+}
+/* Estilos para el contenedor de la cuadrícula */
+.grid-container, h3, .p {
+    color: #3d5a80;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta el número de columnas según el tamaño de la pantalla */
+    gap: 20px; /* Espacio entre las cajas */
+    padding: 10px; /* Espaciado interno */
+}
+
+.box {
+    border: 1px solid #ddd; /* Borde de las cajas */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    background-color: rgb(233, 230, 230); /* Color de fondo de las cajas */
+    text-align: center; /* Centra el texto */
+}
+
+.list-view .card {
+    display: flex; /* Usa flexbox para alinear elementos */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Alinea los elementos a la izquierda */
+    margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+}
+.list-view .card img {
+    margin-bottom: 10px; /* Espacio inferior para la imagen */
+    width: 80px; /* Ajusta el tamaño de la imagen en la vista de lista */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.list-view .card h3 {
+    font-size: 1.2rem; /* Tamaño de fuente para el título */
+    margin-bottom: 5px; /* Espacio inferior entre el título y el párrafo */
+}
+.list-view .card p {
+    font-size: 0.9rem; /* Tamaño de fuente para el párrafo */
+}
+
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Reorganiza en columnas en pantallas grandes */
+  }
+}
+/* Media Queries */
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block; /* Muestra el menú hamburguesa en pantallas pequeñas */
+  }
+  .nav_links {
+   position: absolute; /* Fija la navegación */
+    left: -100%; /* Oculta la navegación fuera de la pantalla */
+    top: 90px; /* Posiciona la navegación */
+    flex-direction: column; /* Organiza verticalmente */
+    background-color: var(--primary-color); /* Color de fondo de la navegación */
+    width: 100%; /* Ancho completo */
+    height: 20%;
+    text-align: center; /* Centra el texto */
+    transition: 0.5s; /* Transición suave */
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); /* Sombra de la navegación */
+  }
+
+  .nav_links.active {
+    left: 0; /* Muestra la navegación cuando está activa */
+  }
+  .nav_links li {
+    margin: 2rem 0; /* Margen vertical entre los elementos de navegación */
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0; /* Oculta la segunda barra cuando está activa */
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Rota la primera barra cuando está activa */
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Rota la tercera barra cuando está activa */
+    
+  }
+  li,
+  a {
+    font-family: var(--primary-font); /* Fuente utilizada */
+    font-size: 16px; /* Tamaño de fuente */
+    color: rgb(252, 250, 250); /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+  }
+}
