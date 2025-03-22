@@ -18,7 +18,18 @@ html, body {
   --accent-color-3: #293241; /* Color de acento 3 */
   --text-color: #030303; /* Color del texto */
 }
-/* Estilo para el contenedor principal */
+:root {
+  --primary-color: #003366; /* Cambiar a un azul más oscuro */
+  --secondary-color: #e6f7ff; /* Cambiar a un fondo más claro */
+  --accent-color-1: #101111; /* Color de acento 1 */
+  --accent-color-2: #ff5733; /* Cambiar a un color más brillante */
+  --text-color: #FFFFFF; /* Cambiar el color del texto a blanco */
+body {
+  font-size: 1rem; /* Aumentar tamaño de fuente base */
+}
+h3 {
+  font-size: 1.5rem; /* Aumentar tamaño de encabezados */
+}
 .container {
   display: flex; /* Usa flexbox para organizar los elementos */
   flex-direction: column; /* Organiza los elementos en columna */
