@@ -27,11 +27,12 @@
   margin: 20px auto;
   padding: 10px 15px;
   background-color: #8cb5e1;
-  color: white;
+  color: rgb(8, 8, 8);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 25px;
+  font-weight: bold;
   transition: background-color 0.3s;
 }
 
