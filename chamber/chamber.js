@@ -67,7 +67,7 @@ const displayMembers = (members) => {
 // Función para alternar entre vista de cuadrícula y lista
 toggleViewButton.addEventListener('click', () => {
   isGridView = !isGridView; // Alterna el estado
-  if (isGridView) {
+  if (isGridView) {//
     cards.classList.remove('list-view');
     cards.classList.add('grid-view');
     toggleViewButton.textContent = 'View in List'; // Cambia el texto del botón

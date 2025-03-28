@@ -1,0 +1,81 @@
+/* Estilos específicos para home.html */
+/* Importamos los estilos base compartidos */
+@import url("styles.css");
+
+/* Estilos específicos para la página de inicio */
+.hero-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilos para la sección de la imagen principal */
+.imagenprincipal {
+  width: 100%;
+  overflow: hidden;
+}
+
+.imagenprincipal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilos para el botón de llamada a la acción */
+#CallToAction {
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #8cb5e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.3s;
+}
+
+#CallToAction:hover {
+  background-color: #1382f8;
+}
+
+/* Estilos para la cuadrícula de la página de inicio */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding-bottom: 25px;
+  background-color: rgb(233, 230, 230);
+  text-align: center;
+}
+
+.box h3 {
+  color: #3d5a80;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  color: #3d5a80;
+  font-size: 1rem;
+  padding: 0 15px;
+}
+
+/* Media queries específicos para la página de inicio */
+@media screen and (max-width: 790px) {
+  #CallToAction {
+    width: 80%;
+    font-size: 20px;
+  }
+  
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
