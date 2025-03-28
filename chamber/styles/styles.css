@@ -13,7 +13,7 @@ body {
   --primary-font: "Roboto", sans-serif; /* Fuente principal */
   --secondary-font: "Roboto Slab", serif; /* Fuente secundaria */
   --primary-color: #1a4b82; /* Color primario más oscuro para mejor contraste */
-   --tercer-color: #8cb5e1;
+  
   --secondary-color: #2c5f8f; /* Color secundario más oscuro */
   --accent-color-1: #000000; /* Color de acento 1 ajustado para máximo contraste */
   --accent-color-2: #d84a24; /* Color de acento 2 más saturado para mejor visibilidad */
@@ -58,7 +58,7 @@ footer {
   justify-content: center; /* Centra horizontalmente */
 
   text-align: left; /* Centra el texto */
-  background: var(--tercer-color); /* Color de fondo del footer */
+  background: #8cb5e1; /* Color de fondo del footer */
   color: white; /* Color del texto en el footer */
   padding: 1rem; /* Espaciado interno */
 }
@@ -443,7 +443,7 @@ h3,
     justify-content: left; /* Centra horizontalmente */
 
     text-align: left; /* Centra el texto */
-    background: (--tercer-color)var; /* Color de fondo del footer */
+    background: #8cb5e1; /* Color de fondo del footer */
     color: white; /* Color del texto en el footer */
     padding: 1rem; /* Espaciado interno */
   }
