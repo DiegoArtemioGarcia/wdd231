@@ -1,38 +1,5 @@
-
-
-
-// Funcionalidad del modo oscuro
-const darkModeToggle = document.getElementById('darkModeToggle');
-const htmlElement = document.documentElement;
-// Verificar preferencia guardada del usuario
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  htmlElement.setAttribute('data-theme', savedTheme);
-  darkModeToggle.checked = savedTheme === 'dark';
-}
-// Agregar evento solo si el elemento existe
-if (darkModeToggle) {
-  darkModeToggle.addEventListener('click', () => {
-    const newTheme = darkModeToggle.checked ? 'dark' : 'light';
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
-}
-// Funcionalidad del menú hamburguesa
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav_links");
-// Eventos para mostrar/ocultar menú móvil
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-// Cerrar menú al hacer clic en un enlace
-document.querySelectorAll(".nav_links li a").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}));
-
 document.addEventListener("DOMContentLoaded", () => {
+    // Funcionalidad de clima
     const currentWeatherEl = document.getElementById("currentWeather");
     const weatherForecastEl = document.getElementById("weatherForecast");
     
@@ -59,11 +26,144 @@ document.addEventListener("DOMContentLoaded", () => {
             weatherForecastEl.innerHTML = forecast;
         })
         .catch(error => weatherForecastEl.textContent = "Failed to load forecast data");
+
+    // Mostrar miembros destacados
+    const members = [
+        {
+            "name": "Tech Solutions",
+            "address": "123 Main St, New York, NY",
+            "phone": "(212) 555-1234",
+            "website": "https://www.techsolutions.com",
+            "image": "images/techsolutions.png",
+            "membership": "gold",
+            "category": "Technology",
+            "description": "Software development and IT solutions company."
+        },
+        {
+            "name": "Green Energy Co.",
+            "address": "456 Greenway Blvd, Los Angeles, CA",
+            "phone": "(323) 555-5678",
+            "website": "https://www.greenenergy.com",
+            "image": "images/greenenergy.png",
+            "membership": "silver",
+            "category": "Renewable Energy",
+            "description": "Providers of solar and wind energy solutions."
+        },
+        {
+            "name": "City Bistro",
+            "address": "789 Market St, Chicago, IL",
+            "phone": "(312) 555-9012",
+            "website": "https://www.citybistro.com",
+            "image": "images/citybistro.png",
+            "membership": "member",
+            "category": "Restaurant",
+            "description": "A cozy café serving the best local dishes."
+        },
+        {
+            "name": "AutoFix Garage",
+            "address": "321 Mechanic Ave, Houston, TX",
+            "phone": "(713) 555-3456",
+            "website": "https://www.autofix.com",
+            "image": "images/autofix.png",
+            "membership": "silver",
+            "category": "Automotive",
+            "description": "Car repair and maintenance services."
+        },
+        {
+            "name": "Style Boutique",
+            "address": "654 Fashion St, Miami, FL",
+            "phone": "(305) 555-7890",
+            "website": "https://www.styleboutique.com",
+            "image": "images/styleboutique.png",
+            "membership": "gold",
+            "category": "Fashion",
+            "description": "High-quality clothing and accessories store."
+        },
+        {
+            "name": "EduPro Academy",
+            "address": "987 Learning Ln, Seattle, WA",
+            "phone": "(206) 555-2345",
+            "website": "https://www.eduproacademy.com",
+            "image": "images/edupro.png",
+            "membership": "member",
+            "category": "Education",
+            "description": "Online courses and professional training."
+        },
+        {
+            "name": "Health First Clinic",
+            "address": "147 Wellness Rd, San Francisco, CA",
+            "phone": "(415) 555-6789",
+            "website": "https://www.healthfirst.com",
+            "image": "images/healthfirst.png",
+            "membership": "gold",
+            "category": "Healthcare",
+            "description": "Medical clinic with specialized care services."
+        }
+    ];
+
+    // Filtrar miembros con membresía "gold" o "silver"
+    const filteredMembers = members.filter(member => member.membership === "gold" || member.membership === "silver");
+
+    // Seleccionar aleatoriamente 2 o 3 miembros destacados
+    const selectedMembers = [];
+    while (selectedMembers.length < 3 && filteredMembers.length > 0) {
+        const randomIndex = Math.floor(Math.random() * filteredMembers.length);
+        selectedMembers.push(filteredMembers.splice(randomIndex, 1)[0]);
+    }
+
+    // Crear las tarjetas spotlight
+    const spotlightSection = document.createElement("section");
+    spotlightSection.classList.add("spotlight-section");
+
+    const spotlightTitle = document.createElement("h2");
+    spotlightTitle.textContent = "Featured Members";
+    spotlightSection.appendChild(spotlightTitle);
+
+    const spotlightContainer = document.createElement("div");
+    spotlightContainer.classList.add("spotlight-container");
+
+    selectedMembers.forEach(member => {
+        const spotlightCard = document.createElement("div");
+        spotlightCard.classList.add("spotlight-card");
+
+        const memberImage = document.createElement("img");
+        memberImage.src = member.image;
+        memberImage.alt = `${member.name} logo`;
+          // Ajustar tamaño de las imágenes
+    memberImage.style.height = "80px";
+    memberImage.style.width = "80px";
+    spotlightCard.appendChild(memberImage);
+
+        const memberName = document.createElement("h3");
+        memberName.textContent = member.name;
+        spotlightCard.appendChild(memberName);
+
+        const memberMembership = document.createElement("p");
+        memberMembership.textContent = `Membership: ${member.membership.charAt(0).toUpperCase() + member.membership.slice(1)}`;
+        spotlightCard.appendChild(memberMembership);
+
+        const memberAddress = document.createElement("p");
+        memberAddress.textContent = `Address: ${member.address}`;
+        spotlightCard.appendChild(memberAddress);
+
+        const memberPhone = document.createElement("p");
+        memberPhone.textContent = `Phone: ${member.phone}`;
+        spotlightCard.appendChild(memberPhone);
+
+        const memberWebsite = document.createElement("a");
+        memberWebsite.href = member.website;
+        memberWebsite.target = "_blank";
+        memberWebsite.textContent = "Visit Website";
+        spotlightCard.appendChild(memberWebsite);
+
+        spotlightContainer.appendChild(spotlightCard);
+    });
+
+    spotlightSection.appendChild(spotlightContainer);
+    document.querySelector("main").appendChild(spotlightSection);
+
+    // Actualizar el año de copyright en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+    // Mostrar la última fecha de modificación del documento
+    document.getElementById("lastModified").textContent = document.lastModified;
 });
-
-
-
-// Actualizar el año de copyright en el footer
-document.getElementById("year").textContent = new Date().getFullYear();
-// Mostrar la última fecha de modificación del documento
-document.getElementById("lastModified").textContent = document.lastModified;
