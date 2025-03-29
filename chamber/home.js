@@ -25,7 +25,40 @@ document.addEventListener("DOMContentLoaded", () => {
             }).join("<br>");
             weatherForecastEl.innerHTML = forecast;
         })
-        .catch(error => weatherForecastEl.textContent = "Failed to load forecast data");
+      .catch(error => weatherForecastEl.textContent = "Failed to load forecast data");
+ 
+  // Funcionalidad del modo oscuro
+const darkModeToggle = document.getElementById('darkModeToggle');
+const htmlElement = document.documentElement;
+// Verificar preferencia guardada del usuario
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  htmlElement.setAttribute('data-theme', savedTheme);
+  darkModeToggle.checked = savedTheme === 'dark';
+}
+// Agregar evento solo si el elemento existe
+if (darkModeToggle) {
+  darkModeToggle.addEventListener('click', () => {
+    const newTheme = darkModeToggle.checked ? 'dark' : 'light';
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
+  
+  // Funcionalidad del menú hamburguesa
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav_links");
+// Eventos para mostrar/ocultar menú móvil
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll(".nav_links li a").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}));
+
 
     // Mostrar miembros destacados
     const members = [
