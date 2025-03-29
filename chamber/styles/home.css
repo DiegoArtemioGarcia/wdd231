@@ -1,5 +1,4 @@
 /* Estilos específicos para home.html */
-/* Importamos los estilos base compartidos */
 @import url("styles.css");
 
 /* Estilos específicos para la página de inicio */
@@ -13,15 +12,13 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  z-index: 500; /* Reducido para permitir que el menú esté por encima */
+  z-index: 1; /* Asegura que otros elementos puedan estar encima si es necesario */
 }
 
 .imagenprincipal img {
   width: 100%;
   height: auto;
   display: block;
-  position: relative;
-  z-index: 1; /* Asegurar que la imagen no se superponga al menú */
 }
 
 /* Estilos para el botón de llamada a la acción dentro de la imagen */
@@ -30,7 +27,7 @@
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 30%; /* Reducido para mayor estética */
+  width: 30%;
   padding: 10px 15px;
   background-color: #e8dfdc;
   color: rgb(8, 8, 8);
@@ -49,56 +46,70 @@
 /* Media queries para ajustar en móviles */
 @media screen and (max-width: 790px) {
   #CallToAction {
-    width: 50%; /* Ajuste para móviles */
+    width: 50%;
     font-size: 18px;
+  }
+  
+  .nav_links {
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 2; /* Asegura que el menú esté por encima de otros elementos */
+  }
+
+  .nav_links.active {
+    left: 0;
+  }
+
+  .nav_links li {
+    margin: 2rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 3; /* Asegura que sea visible y funcional */
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
-/* Ajustes para el menú */
-.nav_links {
-  position: absolute;
-  top: 90px;
-  left: -100%; /* Oculta el menú por defecto */
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  transition: 0.5s;
-  background-color: var(--primary-color);
-  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-  z-index: 1000;
-}
-
-.nav_links.active {
-  left: 0; /* Muestra el menú cuando está activo */
-}
-
-.nav_links li {
-  margin: 2rem 0;
-}
-
-.hamburger {
-  display: block;
-  z-index: 1100;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-.nav_links li a {
-  font-size: 18px;
-  padding: 1rem;
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 791px) {
+  .hamburger {
+    display: none; /* Oculta el menú hamburguesa en pantallas grandes */
+  }
+  .nav_links {
+    list-style: none;
+    display: flex;
+  }
+  .nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  .nav_links li a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    transition: all 0.3s ease 0s;
+  }
+  .nav_links li a:hover {
+    color: var(--accent-color-2);
+  }
 }
 
 /* Estilos para la cuadrícula de la página de inicio */
@@ -136,20 +147,17 @@
   background-color: #f5f5f5;
   margin-top: 2rem;
 }
-
 .spotlight-section h2 {
   text-align: center;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
 }
-
 .spotlight-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 0 1rem;
 }
-
 .spotlight-card {
   background-color: white;
   border-radius: 8px;
@@ -158,27 +166,22 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-
 .spotlight-card:hover {
   transform: translateY(-5px);
 }
-
 .spotlight-card img {
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-
 .spotlight-card h3 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
-
 .spotlight-card .membership {
   color: #ffd700;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-
 .spotlight-card p {
   font-size: 0.9rem;
   color: var(--text-color);
