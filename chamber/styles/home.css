@@ -10,6 +10,7 @@
 
 /* Estilos para la sección de la imagen principal */
 .imagenprincipal {
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
@@ -20,24 +21,34 @@
   display: block;
 }
 
-/* Estilos para el botón de llamada a la acción */
+/* Estilos para el botón de llamada a la acción dentro de la imagen */
 #CallToAction {
-  width: 50%;
-  display: block;
-  margin: 20px auto;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%; /* Reducido para mayor estética */
   padding: 10px 15px;
-  background-color: #8cb5e1;
+  background-color: #e8dfdc;
   color: rgb(8, 8, 8);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
 #CallToAction:hover {
   background-color: #1382f8;
+}
+
+/* Media queries para ajustar en móviles */
+@media screen and (max-width: 790px) {
+  #CallToAction {
+    width: 50%; /* Ajuste para móviles */
+    font-size: 18px;
+  }
 }
 
 /* Estilos para la cuadrícula de la página de inicio */

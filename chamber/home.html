@@ -9,22 +9,27 @@
     <meta name="robots" content="index, follow" />
     <link rel="icon" href="images/favicon.ico" />
     <title>Directorio de Negocios - Cámara de Comercio</title>
+    
     <!-- Open Graph Meta Tags para compartir en redes sociales -->
     <meta property="og:title" content="Directorio de Negocios - Cámara de Comercio" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/og-image.jpg" />
     <meta property="og:url" content="https://yourdomain.com/directory.html" />
     <meta property="og:description" content="Explora nuestro directorio completo de negocios locales y encuentra la información que necesitas." />
+    
     <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    
+    <!-- Normalización de estilos y estilos personalizados -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="styles/home.css" />
+
     <!-- Google Business Profile Verification -->
     <meta name="google-site-verification" content="#" />
+
     <!-- Google Analytics -->
-    
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -33,41 +38,45 @@
         gtag("js", new Date());
         gtag("config", "TU_ID_DE_ANALYTICS");
     </script>
+
     <script defer src="home.js"></script>
 </head>
 <body>
-    <div class="container"> <!-- Contenedor principal que envuelve todo -->
+    <div class="container">
         <header>
-            <div class="logo1"> <!-- Sección del logo -->
+            <div class="logo1">
                 <img class="logo" src="images/icons8-jaxcore-96.png" alt="Logo" height="70" />
-                <p id="titulo">Chamber of Commerce</p> <!-- Título de la cámara -->
+                <p id="titulo">Chamber of Commerce</p>
             </div>
-            <nav> <!-- Navegación principal -->
-                <ul class="nav_links"> <!-- Lista de enlaces de navegación -->
+            <nav>
+                <ul class="nav_links">
                     <li>
-                        <label class="switch"> <!-- Interruptor para el modo oscuro -->
+                        <label class="switch">
                             <input type="checkbox" id="darkModeToggle" />
                             <span class="slider round"></span>
                         </label>
                     </li>
-                    <li><a href="home.html">Home</a></li> <!-- Enlace a la página de inicio -->
-                    <li><a href="directory.html">Directory</a></li> <!-- Enlace al directorio -->
-                    <li><a href="join.html">Join</a></li> <!-- Enlace para unirse -->
-                    <li><a href="discovery.html">Discovery</a></li> <!-- Enlace a la página de descubrimiento -->
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discovery.html">Discovery</a></li>
                 </ul>
             </nav>
-            <button class="hamburger" aria-label="Menu"> <!-- Botón para el menú hamburguesa -->
+            <button class="hamburger" aria-label="Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
         </header>
-        <main> <!-- Contenido principal -->
+
+        <main>
             <section class="hero-image">
-    <div class="imagenprincipal">
-        <img src="images/Alicantecity(1).webp" alt="Imagen de Alicante" loading="lazy" /> <!-- Carga diferida -->
-    </div>
-</section>
+                <div class="imagenprincipal">
+                    <img src="images/Alicantecity(1).webp" alt="Imagen de Alicante" loading="lazy" />
+                    <button id="CallToAction">Call To Action</button> <!-- Botón dentro de la imagen -->
+                </div>
+            </section>
+
             <section class="grid-container"> 
                 <div class="box c1"> 
                     <h3>Events</h3> 
@@ -84,35 +93,32 @@
                     <p id="weatherForecast">Loading...</p> 
                 </div> 
             </section> 
-             <section>
-                <button id="CallToAction">Call To Action</button> <!-- Botón para alternar vista -->
-            </section>
-            
         </main>
-        
+
+        <footer>
+            <div class="name">
+                <p>Alicant Chamber of Commerce <br> Carrer La Font 19, 03001 Alicante, Spain<br>
+                Tel: +34 965 140 100<br>
+                Email: chamberalacant@mail.com
+                </p>
+            </div>
+            <div class="socialmedia">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/facebook1.png" alt="Facebook" height="40" />
+                </a>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
+                    <img src="images/gorjeo.png" alt="Twitter" height="40"/>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn" height="40"/>
+                </a>
+            </div>
+            <div class="footer1">
+                <p>WDD231 Class project <br> Diego Garcia</p>
+                <p>&copy; <span id="year"></span> - Alicante Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </footer>
     </div>
-    <footer> <!-- Pie de página -->
-        <div class="name"><p>Alicant Chamber of Comerce <br> Carrer La font 19br
-            03001 Alicante, Spain<br>
-            Tel: +34 965 140 100<br>
-            Email: chamberalacant@mail.com
-        </p></div>
-        <div class="socialmedia">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-                <img src="images/facebook1.png" alt="Facebook" height="40" />
-            </a>
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
-                <img src="images/gorjeo.png" alt="Twitter" height="40"/>
-            </a>
-            
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <img src="images/linkedin.png" alt="LinkedIn" height="40"/>
-            </a>
-        </div>
-        <div class="footer1"> <p>WDD231 Class project <br> Diego Garcia</p>
-        <p>&copy; <span id="year"></span> - Alicante Chamber of Comerce</p> <!-- Información de derechos de autor -->
-        <p>Last Modified: <span id="lastModified"></span></p> <!-- Fecha de última modificación --></div>
-       
-    </footer>
 </body>
 </html>

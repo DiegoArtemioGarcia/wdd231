@@ -141,6 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => weatherForecastEl.textContent = "Failed to load forecast data");
 });
 
+
+
 // Actualizar el año de copyright en el footer
 document.getElementById("year").textContent = new Date().getFullYear();
 // Mostrar la última fecha de modificación del documento
