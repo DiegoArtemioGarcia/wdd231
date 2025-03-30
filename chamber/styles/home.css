@@ -111,6 +111,27 @@
     color: var(--accent-color-2);
   }
 }
+/* Estilos para el modo oscuro */
+[data-theme="dark"] {
+  background-color: #121212; /* Color de fondo en modo oscuro */
+  color: #ffffff; /* Color del texto en modo oscuro */
+}
+[data-theme="dark"] .card {
+  background-color: #1c1c1c; /* Fondo de tarjeta en modo oscuro */
+  border: 1px solid #444; /* Borde de tarjeta en modo oscuro */
+}
+[data-theme="dark"] .card p {
+  color: #ffffff; /* Texto en blanco en modo oscuro */
+}
+/* Variables para el modo oscuro */
+[data-theme="dark"] {
+  --primary-color: #4b4c4d; /* Color primario en modo oscuro */
+  --secondary-color: #1c1c1c; /* Color secundario en modo oscuro */
+  --accent-color-1: #6a7079; /* Color de acento 1 en modo oscuro */
+  --accent-color-2: #f6f4f3; /* Color de acento 2 en modo oscuro */
+  --text-color: #ffffff; /* Color del texto en modo oscuro */
+  --bg-color: #121212; /* Color de fondo en modo oscuro */
+}
 
 /* Estilos para la cuadrícula de la página de inicio */
 .grid-container {
