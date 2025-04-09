@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Directorio de negocios locales de la Cámara de Comercio. Encuentra información detallada sobre empresas miembro, servicios y contactos comerciales en nuestra área." />
+        <meta name="keywords" content="cámara de comercio, negocios locales, directorio empresarial, empresas miembro, comercio local" />
+        <meta name="author" content="Diego Garcia" />
+        <meta name="robots" content="index, follow" />
+        <link rel="icon" href="images/favicon.ico" />
+        <title>Directorio de Negocios - Cámara de Comercio</title>
+        
+        <!-- Open Graph Meta Tags para compartir en redes sociales -->
+        <meta property="og:title" content="Directorio de Negocios - Cámara de Comercio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="images/og-image.jpg" />
+        <meta property="og:url" content="https://yourdomain.com/directory.html" />
+        <meta property="og:description" content="Explora nuestro directorio completo de negocios locales y encuentra la información que necesitas." />
+        
+        <!-- Fuentes de Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+        
+        <!-- Normalización de estilos y estilos personalizados -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link rel="stylesheet" href="styles/home.css" />
+        <script defer src="scripts/join.js"></script>
+        <!-- Google Business Profile Verification -->
+        <meta name="google-site-verification" content="#" />
+    
+        <!-- Google Analytics -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "TU_ID_DE_ANALYTICS");
+        </script>
+    
+        
+    </head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo1">
+                <img class="logo" src="images/icons8-jaxcore-96.png" alt="Logo" height="70" />
+                <p id="titulo">Chamber of Commerce</p>
+            </div>
+            <nav>
+                <ul class="nav_links">
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox" id="darkModeToggle" />
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </header>
+
+<div class="form-container">
+                <form method="get" action="thankyou.html">
+                    <div class="form-group">
+                        <label for="firstName">First Name:
+                            <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="Please enter your first name">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:
+                            <input type="text" id="lastName" name="lastName" required autocomplete="family-name" title="Please enter your last name">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Position Title:
+                            <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]+" minlength="7" autocomplete="organization-title" title="Enter your position (minimum 7 characters, letters, hyphens and spaces only)">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Please enter your email address">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone:
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Please enter your mobile phone number">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="business">Business/Organization Name:
+                            <input type="text" id="business" name="business" required autocomplete="organization" title="Please enter your business or organization name">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="membership">Membership Level:
+                            <select id="membership" name="membership" required>
+                                <option value="">Select a membership level</option>
+                                <option value="np">NP Membership (Non Profit - No Fee)</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Business Description:
+                            <textarea id="description" name="description" title="Please describe your business"></textarea>
+                        </label>
+                    </div>
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    <button type="submit">Submit Application</button>
+                </form>
+                <div class="membership-cards">
+                    <div class="card" id="npCard">
+                        <h3>NP Membership</h3>
+                        <p>For non-profit organizations</p>
+                        <button onclick="openModal('npModal')">Learn More</button>
+                    </div>
+                    <div class="card" id="bronzeCard">
+                        <h3>Bronze Membership</h3>
+                        <p>Basic benefits package</p>
+                        <button onclick="openModal('bronzeModal')">Learn More</button>
+                    </div>
+                    <div class="card" id="silverCard">
+                        <h3>Silver Membership</h3>
+                        <p>Enhanced benefits package</p>
+                        <button onclick="openModal('silverModal')">Learn More</button>
+                    </div>
+                    <div class="card" id="goldCard">
+                        <h3>Gold Membership</h3>
+                        <p>Premium benefits package</p>
+                        <button onclick="openModal('goldModal')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modals -->
+            <div id="npModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('npModal')">&times;</span>
+                    <h2>NP Membership Benefits</h2>
+                    <ul>
+                        <li>Free membership for non-profit organizations</li>
+                        <li>Basic directory listing</li>
+                        <li>Networking opportunities</li>
+                        <li>Monthly newsletter</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="bronzeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+                    <h2>Bronze Membership Benefits</h2>
+                    <ul>
+                        <li>Enhanced directory listing</li>
+                        <li>Social media promotion</li>
+                        <li>Event discounts</li>
+                        <li>Quarterly spotlight opportunity</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="silverModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('silverModal')">&times;</span>
+                    <h2>Silver Membership Benefits</h2>
+                    <ul>
+                        <li>All Bronze benefits</li>
+                        <li>Priority event registration</li>
+                        <li>Monthly spotlight opportunity</li>
+                        <li>Business training sessions</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="goldModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('goldModal')">&times;</span>
+                    <h2>Gold Membership Benefits</h2>
+                    <ul>
+                        <li>All Silver benefits</li>
+                        <li>Premium directory placement</li>
+                        <li>Weekly spotlight opportunity</li>
+                        <li>Exclusive networking events</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </main>
+
+        <footer>
+            <div class="name">
+                <p>Alicant Chamber of Commerce <br> Carrer La Font 19, 03001 Alicante, Spain<br>
+                Tel: +34 965 140 100<br>
+                Email: chamberalacant@mail.com
+                </p>
+            </div>
+            <div class="socialmedia">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <img src="images/facebook1.png" alt="Facebook" height="40" />
+                </a>
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
+                    <img src="images/gorjeo.png" alt="Twitter" height="40"/>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn" height="40"/>
+                </a>
+            </div>
+            <div class="footer1">
+                <p>WDD231 Class project <br> Diego Garcia</p>
+                <p>&copy; <span id="year"></span> - Alicante Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+    </div>
+    <script>
+       
+      </script>
+      
+</body>
+</html>

@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Directorio de negocios locales de la Cámara de Comercio. Encuentra información detallada sobre empresas miembro, servicios y contactos comerciales en nuestra área." />
-        <meta name="keywords" content="cámara de comercio, negocios locales, directorio empresarial, empresas miembro, comercio local" />
-        <meta name="author" content="Diego Garcia" />
-        <meta name="robots" content="index, follow" />
-        <link rel="icon" href="images/favicon.ico" />
-        <title>Directorio de Negocios - Cámara de Comercio</title>
-        
-        <!-- Open Graph Meta Tags para compartir en redes sociales -->
-        <meta property="og:title" content="Directorio de Negocios - Cámara de Comercio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="images/og-image.jpg" />
-        <meta property="og:url" content="https://yourdomain.com/directory.html" />
-        <meta property="og:description" content="Explora nuestro directorio completo de negocios locales y encuentra la información que necesitas." />
-        
-        <!-- Fuentes de Google -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
-        
-        <!-- Normalización de estilos y estilos personalizados -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-        <link rel="stylesheet" href="styles/home.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thank you page for Chamber of Commerce membership application" />
+    <meta name="author" content="Diego Garcia" />
+    <link rel="icon" href="images/favicon.ico" />
+    <title>Thank You - Chamber of Commerce</title>
     
-        <!-- Google Business Profile Verification -->
-        <meta name="google-site-verification" content="#" />
+    <!-- Fonts and Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="styles/home.css" />
     
-        <!-- Google Analytics -->
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "TU_ID_DE_ANALYTICS");
-        </script>
-    
-        <script defer src="scripts/discover.js"></script>
-    </head>
-
+    <!-- Scripts -->
+    <script defer src="scripts/thankyou.js"></script>
+</head>
 <body>
     <div class="container">
         <header>
@@ -69,11 +45,9 @@
                 <span class="bar"></span>
             </button>
         </header>
-
         <main>
-            
+            <div id="formData" class="thank-you-container"></div>
         </main>
-
         <footer>
             <div class="name">
                 <p>Alicant Chamber of Commerce <br> Carrer La Font 19, 03001 Alicante, Spain<br>
@@ -99,6 +73,5 @@
             </div>
         </footer>
     </div>
-    
 </body>
 </html>
