@@ -28,29 +28,11 @@
     margin: 2rem 0;
   }
 
-  .hamburger {
-    display: block;
-    z-index: 3; /* Asegura que sea visible y funcional */
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
+  
 
 /* Estilos para pantallas grandes */
 @media screen and (min-width: 791px) {
-  .hamburger {
-    display: none; /* Oculta el menú hamburguesa en pantallas grandes */
-  }
+
   .nav_links {
     list-style: none;
     display: flex;
@@ -92,8 +74,14 @@
 
 
 
-
-
+.hamburger, li {
+    margin-right: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#2c5f8f;
+  cursor: pointer;
+ 
+  z-index: 3; /* Asegura que sea visible y funcional */
+}
    
 
 @media screen and (max-width: 790px) {
