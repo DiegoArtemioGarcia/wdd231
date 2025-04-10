@@ -72,6 +72,7 @@
   }
 
   .hamburger {
+  
     display: block;
     z-index: 3; /* Asegura que sea visible y funcional */
   }
@@ -96,9 +97,9 @@
   }
   .nav_links {
     list-style: none;
-    display: flex;
+    display: flex; /* Cambia a flexbox para alinear horizontalmente */
   }
-  .nav_links li {
+  .nav_links li { 
     display: inline-block;
     padding: 0px 20px;
   }
