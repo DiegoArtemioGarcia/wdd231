@@ -331,7 +331,7 @@ main {
 }
 
 .card button:hover {
-  background: var(--secondary-color);
+  background: rgb(247, 113, 36);
 }
 @media (min-width: 641px) {
   .cards-grid {
