@@ -1,0 +1,53 @@
+{
+    "places": [
+      {
+        "name": "Alicante City View",
+        "address": "Calle Vista, 1, 03001 Alicante",
+        "description": "Panoramic view of Alicante's beautiful coastline and urban landscape.",
+        "image": "images/Alicantecity.webp"
+      },
+      {
+        "name": "Historic Center",
+        "address": "Centro Histórico, 03002 Alicante",
+        "description": "The charming historic center with traditional architecture.",
+        "image": "images/discover2.webp"
+      },
+      {
+        "name": "Santa Bárbara Castle",
+        "address": "Monte Benacantil, 03002 Alicante",
+        "description": "Medieval fortress overlooking the city.",
+        "image": "images/discover3.webp"
+      },
+      {
+        "name": "Explanada de España",
+        "address": "Paseo de la Explanada, 03001 Alicante",
+        "description": "Famous promenade with its distinctive wave-patterned tiles.",
+        "image": "images/discover4.webp"
+      },
+      {
+        "name": "San Juan Beach",
+        "address": "Playa San Juan, 03540 Alicante",
+        "description": "Beautiful golden sand beach stretching for kilometers.",
+        "image": "images/discover5.webp"
+      },
+      {
+        "name": "Port of Alicante",
+        "address": "Puerto de Alicante, 03001 Alicante",
+        "description": "Modern marina and historical port area.",
+        "image": "images/discover6.webp"
+      },
+      {
+        "name": "Central Market",
+        "address": "Av. Alfonso X El Sabio, 8, 03004 Alicante",
+        "description": "Traditional market with local products and architecture.",
+        "image": "images/discover7.webp"
+      },
+      {
+        "name": "Archaeological Museum",
+        "address": "Pl. Dr. Gómez Ulla, S/N, 03013 Alicante",
+        "description": "MARQ museum showcasing the region's rich history.",
+        "image": "images/discover8.webp"
+      }
+    ]
+  }
+  
