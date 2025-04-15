@@ -1,0 +1,128 @@
+/* Tipografía y variables */
+:root {
+    --color-primario: #022c5d;
+    --color-secundario: #b9e8dc;
+    --color-fondo: #F3F4F6;
+    --color-texto: #333;
+    --color-blanco: #fff;
+  }
+  
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+  
+  header {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 1rem 0 0;
+    list-style: none;
+  }
+  
+  nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+main {
+  padding: 2rem;
+  flex: 1;
+}
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  .bienvenida h2,
+  .cita-del-dia h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--color-primario);
+  }
+  
+  blockquote {
+    font-style: italic;
+    background: var(--color-secundario);
+    padding: 1rem;
+    border-left: 5px solid var(--color-primario);
+    margin: 1rem 0;
+  }
+  
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+/* Menú hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Navegación para pantallas grandes */
+  #main-nav ul {
+    flex-wrap: wrap;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  
+    nav#main-nav {
+      display: none;
+      background-color: var(--color-primario);
+    }
+  
+    nav#main-nav ul {
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav#main-nav.show {
+      display: block;
+    }
+  
+    nav#main-nav li {
+      padding: 1rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  
+    nav#main-nav li:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+    
