@@ -5,38 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Site for sharing the Gospel of Jesus Christ. Doctrine, testimonies, and inspiration.">
   <title>Light of the Gospel</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <script src="js/main.js" defer></script>
- 
-  <script src="js/modal.js" defer></script>
-  <script src="js/hamburger.js" defer></script>
-  <script src="js/quote-of-the-day.js" defer></script>
-  <script src="js/quote-modal.js" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap">
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tusitio.com/"> <!-- Cambia esto por la URL real -->
+<meta property="og:title" content="Light of the Gospel">
+<meta property="og:description" content="A site to share the Gospel of Jesus Christ through teachings, testimonies, and inspiration.">
+<meta property="og:image" content="https://tusitio.com/images/preview.jpg"> <!-- Imagen representativa -->
 
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://tusitio.com/">
+<meta name="twitter:title" content="Light of the Gospel">
+<meta name="twitter:description" content="A site to share the Gospel of Jesus Christ through teachings, testimonies, and inspiration.">
+<meta name="twitter:image" content="https://tusitio.com/images/preview.jpg">
+
+<script src="scripts/index.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
-<body>
-  <header>
-    <h1>Light of the Gospel</h1>
-    <button id="menu-toggle" aria-label="Open menu" class="hamburger">&#9776;</button>
-    <nav id="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="doctrine.html">Doctrine</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="form.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Light of the Gospel</h1>
+ <button id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav" class="hamburger">&#9776;</button>
 
+  <nav id="main-nav" class="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Principles.html">Principles</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+     
+<div class="imagenprincipal">
+    <div class="image-overlay">
+      <p>And it shall come to pass in the last days⁠, that the mountain of the Lord⁠’s house shall be established in the top of the mountains, and shall be exalted above the hills; and all nations shall flow unto it.<br>Isaias 2:2</p>
+    </div>
+<img src="images/moroni.webp" alt="Estatua de Moroni" loading="lazy">
+</div>
   <main>
     <section class="bienvenida">
       <h2>Welcome</h2>
-      <p>This site was created to share the light of the Gospel of Jesus Christ. Here you will find teachings, personal experiences, and inspiring resources.</p>
-    </section>
+      <p>
+        Welcome to <strong>Light of the Gospel</strong>, a place of peace, reflection, and truth.
+      </p>
+      <p>
+        This site was created to illuminate lives with the teachings of Jesus Christ. Whether you're seeking strength, answers, or a deeper connection with God, you are warmly invited to explore a growing collection of gospel principles, personal testimonies, and uplifting messages rooted in the Savior's love.
+      </p>
+      <p>
+        Here, we believe that even the smallest spark of faith can light the way forward. Through scripture, inspired words, and real-life experiences, we aim to strengthen hearts, encourage service, and remind each visitor of their divine identity and purpose.
+      </p>
+      <p>
+        Come and discover insights that will inspire your soul and bring peace to your heart. This is more than just a website—it’s a place to feel the Spirit, to learn, and to grow in Christ.
+      </p></section>
 
+    
     <section class="cita-del-dia">
       <h2>Quote of the Day</h2>
       <blockquote id="quote-of-the-day">
@@ -44,22 +69,26 @@
       </blockquote>
     </section>
 
-    <section id="quotes-container">
-      <h2>Inspirational Quotes</h2>
-      <!-- Las citas se agregarán aquí mediante JavaScript -->
-    </section>
 
-    <div id="quote-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <p id="modal-quote"></p>
-      </div>
-    </div>
+    <section>
+      <h2>Get in Touch</h2>
+      <form action="form-action.html" method="POST" id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Light of the Gospel. All rights reserved. | <a href="attribution.html">Attribution</a></p>
+    <p>&copy; 2025 Diego A. Garci</p>
   </footer>
-  <script src="js/quotes.js"></script>
 </body>
 </html>
