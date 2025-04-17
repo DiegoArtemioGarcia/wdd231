@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Faith in Jesus Christ",
+    "description": "Faith in Jesus Christ is the first principle of the gospel and the foundation of all righteousness",
+    "date": "2025-01-15",
+    "category": "Foundational Principles",
+    "importance": "Essential"
+  },
+  {
+    "title": "Repentance",
+    "description": "Repentance is a change of heart and mind that brings us closer to God",
+    "date": "2024-04-16",
+    "category": "Foundational Principles",
+    "importance": "Vital"
+  },
+  {
+    "title": "Baptism",
+    "description": "Baptism is an essential ordinance to enter the kingdom of God",
+    "date": "2025-04-17",
+    "category": "Ordinances",
+    "importance": "Necessary"
+  },
+  {
+    "title": "Gift of the Holy Ghost",
+    "description": "The gift of the Holy Ghost guides us to all truth and comforts us",
+    "date": "2025-04-18",
+    "category": "Spiritual Gifts",
+    "importance": "Fundamental"
+  },
+  {
+    "title": "Prayer",
+    "description": "Prayer is our direct line of communication with our Heavenly Father",
+    "date": "2025-04-19",
+    "category": "Daily Practices",
+    "importance": "Daily"
+  },
+  {
+    "title": "Scripture Study",
+    "description": "Daily scripture study strengthens our faith and knowledge",
+    "date": "2025-04-20",
+    "category": "Daily Practices",
+    "importance": "Regular"
+  },
+  {
+    "title": "Service",
+    "description": "Serving others is serving God and developing Christlike love",
+    "date": "2025-04-21",
+    "category": "Actions",
+    "importance": "Ongoing"
+  },
+  {
+    "title": "Temple",
+    "description": "The temple is the house of the Lord where we make sacred covenants",
+    "date": "2025-04-22",
+    "category": "Sacred Places",
+    "importance": "Sacred"
+  },
+  {
+    "title": "Family",
+    "description": "The family is ordained of God and central to His plan of happiness",
+    "date": "2025-04-23",
+    "category": "Relationships",
+    "importance": "Eternal"
+  },
+  {
+    "title": "Word of Wisdom",
+    "description": "The Word of Wisdom is a law of health revealed by the Lord",
+    "date": "2025-04-24",
+    "category": "Commandments",
+    "importance": "Physical"
+  },
+  {
+    "title": "Tithing",
+    "description": "Tithing develops faith and shows our commitment to God",
+    "date": "2025-05-25",
+    "category": "Commandments",
+    "importance": "Financial"
+  },
+  {
+    "title": "Sabbath Day",
+    "description": "Keeping the Sabbath day holy brings us closer to Christ",
+    "date": "2025-04-26",
+    "category": "Commandments",
+    "importance": "Weekly"
+  },
+  {
+    "title": "Missionary Work",
+    "description": "Sharing the gospel brings joy and blessings to others",
+    "date": "2025-04-27",
+    "category": "Service",
+    "importance": "Global"
+  },
+  {
+    "title": "Family History",
+    "description": "Family history connects us to our ancestors",
+    "date": "2025-04-28",
+    "category": "Temple Work",
+    "importance": "Generational"
+  },
+  {
+    "title": "Covenants",
+    "description": "Covenants are sacred promises between God and His children",
+    "date": "2025-04-29",
+    "category": "Foundational Principles",
+    "importance": "Eternal"
+  }
+]
